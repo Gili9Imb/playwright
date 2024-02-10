@@ -3,7 +3,7 @@ from test_actions.FillAction import FillAction
 from test_actions.WaitAction import WaitAction
 
 
-class Test():
+class Test:
 
     fill_action = FillAction()
     click_action = ClickAction()
