@@ -1,6 +1,7 @@
 from playwright.sync_api import sync_playwright
 from test_actions.ClickAction import ClickAction
 from test_actions.FillAction import FillAction
+from test_actions.OpenUrl import OpenUrl
 from test_actions.WaitAction import WaitAction
 
 
@@ -8,12 +9,13 @@ class Test2:
     fill_action = FillAction()
     click_action = ClickAction()
     wait_action = WaitAction()
+    open_url = OpenUrl()
 
     def test_demo(self):
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=False, slow_mo=3 * 1000)
             page = browser.new_page()
-            page.goto("https://www.saucedemo.com/")
+            Test2.open_url.runUrl(page,"https://www.saucedemo.com/")
             print("Page opened")
 
             # Actions performed on the page
