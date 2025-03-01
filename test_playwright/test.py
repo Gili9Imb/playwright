@@ -1,30 +1,7 @@
-import unittest
-from playwright.sync_api import sync_playwright
-from test_actions.ClickAction import ClickAction
-from test_actions.FillAction import FillAction
-from test_actions.OpenUrl import OpenUrl
-from test_actions.WaitAction import WaitAction
+from test_playwright.test_base import BaseTest
 
-class Test(unittest.TestCase):
 
-    @classmethod
-    def setUpClass(cls):
-        cls.fill_action = FillAction()
-        cls.click_action = ClickAction()
-        cls.wait_action = WaitAction()
-        cls.open_url = OpenUrl()
-        cls.playwright = sync_playwright().start()
-        cls.browser = cls.playwright.chromium.launch(headless=False)
-        cls.context = cls.browser.new_context()
-
-    @classmethod
-    def tearDownClass(cls):
-        cls.context.close()
-        cls.browser.close()
-        cls.playwright.stop()
-
-    def get_page(self):
-        return self.context.new_page()
+class Test(BaseTest):
 
     def test_demo(self):
         page = self.get_page()
@@ -38,6 +15,3 @@ class Test(unittest.TestCase):
         # Assertions to verify the test
         self.assertEqual(page.url, "https://www.saucedemo.com/inventory.html", "Failed to login")
         self.assertTrue(page.locator("text=Sauce Labs Backpack").is_visible(), "Sauce Labs Backpack not visible")
-
-if __name__ == '__main__':
-    unittest.main()
