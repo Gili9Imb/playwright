@@ -1,29 +1,43 @@
+import unittest
 from playwright.sync_api import sync_playwright
 from test_actions.ClickAction import ClickAction
 from test_actions.FillAction import FillAction
 from test_actions.OpenUrl import OpenUrl
 from test_actions.WaitAction import WaitAction
 
+class Test2(unittest.TestCase):
 
-class Test2:
-    fill_action = FillAction()
-    click_action = ClickAction()
-    wait_action = WaitAction()
-    open_url = OpenUrl()
+    @classmethod
+    def setUpClass(cls):
+        cls.fill_action = FillAction()
+        cls.click_action = ClickAction()
+        cls.wait_action = WaitAction()
+        cls.open_url = OpenUrl()
+        cls.playwright = sync_playwright().start()
+        cls.browser = cls.playwright.chromium.launch(headless=False)
+        cls.context = cls.browser.new_context()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.context.close()
+        cls.browser.close()
+        cls.playwright.stop()
+
+    def get_page(self):
+        return self.context.new_page()
 
     def test_demo(self):
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=False, slow_mo=3 * 1000)
-            page = browser.new_page()
-            Test2.open_url.runUrl(page,"https://www.saucedemo.com/")
-            print("Page opened")
+        page = self.get_page()
+        self.open_url.runUrl(page, "https://www.saucedemo.com/")
+        print("Page opened")
+        self.fill_action.fillElement(page, "//input[@id='user-name']", "standard_user")
+        self.fill_action.fillElement(page, "//input[@id='password']", "secret_sauce")
+        self.click_action.clickOnElementByText(page, 'Login')
+        self.wait_action.waitforElement(page, "text", "Sauce Labs Backpack")
 
-            # Actions performed on the page
-            Test2.fill_action.fillElement(page, "//input[@id='user-name']", "standard_user")
-            Test2.fill_action.fillElement(page, "//input[@id='password']", "secret_sauce")
-            Test2.click_action.clickOnElementByText(page, 'Login')
-            Test2.wait_action.waitforElement(page, "text", "Sauce Labs Backpack")
+        # Assertions to verify the test
+        self.assertEqual(page.url, "https://www.saucedemo.com/inventory.html", "Failed to login")
+        self.assertTrue(page.locator("text=Sauce Labs Backpack").is_visible(), "Sauce Labs Backpack not visible")
 
-
-# Create a Test object and run the test
-test_instance = Test2
+if __name__ == '__main__':
+    unittest.main()
