@@ -3,7 +3,7 @@ from test_playwright.test_base import BaseTest
 
 class TestLogin(BaseTest):
 
-    def testLoginFooFooTest(self):
+    def testLoginFoofooTest(self):
         page = self.get_page()
         self.open_url.runUrl(page, "https://www.saucedemo.com/")
         print("Page opened")
