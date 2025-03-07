@@ -15,15 +15,11 @@ class TestAddToCart(BaseTest):
     def testAddAllItemsToCart(self):
         page = self.get_page()
         Scenarios.login(self, page)
-        buttons = page.locator(".btn_inventory").element_handles()
-        for button in buttons:
-            button.click()
+        item_count = clickOnItemsInList(page)
 
         badge = page.locator('[data-test="shopping-cart-badge"]')
-        button_count = len(buttons)
         assert badge.is_visible(), "Cart badge is not visible"
-        assert int(
-            badge.inner_text()) == button_count, f"Cart badge does not contain the expected number {button_count}"
+        assert int(badge.inner_text()) == item_count, f"Expected {item_count} items in the cart badge"
 
     def testAddAllItemsToCartAndRemove(self):
         page = self.get_page()

@@ -43,6 +43,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python tests.Python tests for test_add_to_cart.TestAddToCart.executor": "Debug",
+    "Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCart.executor": "Run",
     "Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCartAndRemove.executor": "Run",
     "Python.BaseTest.executor": "Run",
     "Python.ClickAction.executor": "Run",
@@ -59,7 +60,7 @@
       <recent name="C:\Users\gnimb\Dev\playwright\Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_add_to_cart.TestAddToCart">
+  <component name="RunManager" selected="Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCart">
     <configuration name="Python tests for test_add_to_cart.TestAddToCart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="play_py" />
       <option name="ENV_FILES" value="" />
@@ -72,6 +73,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_add_to_cart.TestAddToCart&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="play_py" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_playwright" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_add_to_cart.TestAddToCart.testAddAllItemsToCart&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -107,6 +123,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCart" />
         <item itemvalue="Python tests.Python tests for test_add_to_cart.TestAddToCart" />
         <item itemvalue="Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCartAndRemove" />
         <item itemvalue="Python tests.Python tests for test_add_to_cart.TestAddToCart.testClickOnItemBackPack" />
