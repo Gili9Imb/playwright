@@ -4,3 +4,4 @@ __pycache__/
 
 # Ignore .idea directory and its files
 .idea/
+.idea\workspace.xml
