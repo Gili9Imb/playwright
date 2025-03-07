@@ -1,0 +1,41 @@
+name: Pytest CI
+
+on:
+  push:
+    branches:
+      - main  # Run tests when pushing to the main branch
+  pull_request:
+    branches:
+      - main  # Run tests for PRs targeting main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Change to windows-latest or macos-latest if needed
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"  # Adjust based on your project
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run pytest
+        run: |
+          source .venv/bin/activate
+          pytest --junitxml=pytest-report.xml
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-results
+          path: pytest-report.xml
