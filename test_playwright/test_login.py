@@ -14,7 +14,7 @@ class TestLogin(BaseTest):
         self.assertEqual(page.url, "https://www.saucedemo.com/inventory.html", "Failed to login")
         self.assertTrue(page.locator("text=Sauce Labs Backpack").is_visible(), "Sauce Labs Backpack not visible")
 
-    def testLoginWrongEmail(self):
+    def testLoginWithWrongEmail(self):
         page = self.get_page()
         self.open_url.runUrl(page, "https://www.saucedemo.com/")
         print("Page opened")
