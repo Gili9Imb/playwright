@@ -1,16 +1,16 @@
-name: Pytest CI
+name: Playwright Tests
 
 on:
   push:
     branches:
-      - main  # Run tests when pushing to the main branch
+      - main  # Run tests on push to main
   pull_request:
     branches:
-      - main  # Run tests for PRs targeting main
+      - main  # Run tests on PRs targeting main
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Change to windows-latest or macos-latest if needed
+    runs-on: ubuntu-latest  # Use Windows or macOS if needed
 
     steps:
       - name: Checkout repository
@@ -28,7 +28,12 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run pytest
+      - name: Install Playwright browsers
+        run: |
+          source .venv/bin/activate
+          playwright install --with-deps
+
+      - name: Run Playwright tests
         run: |
           source .venv/bin/activate
           pytest --junitxml=pytest-report.xml
