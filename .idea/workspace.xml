@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ba6c766-2388-48e8-991d-fa9ea9cc33cd" name="Changes" comment="Second commit">
+      <change beforePath="$PROJECT_DIR$/.githubworkflowspytest-playwright.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_actions/ClickAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_actions/ClickAction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_actions/FillAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_actions/FillAction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_actions/Scenarios.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_actions/Scenarios.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_actions/WaitAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_actions/WaitAction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_playwright/test_add_to_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_playwright/test_add_to_cart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_playwright/test_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_playwright/test_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_playwright/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_playwright/test_login.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -39,27 +48,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test_add_to_cart.TestAddToCart.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCart.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCartAndRemove.executor&quot;: &quot;Run&quot;,
-    &quot;Python.BaseTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ClickAction.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gnimb/Dev/play_py&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_add_to_cart.TestAddToCart.executor": "Run",
+    "Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCart.executor": "Run",
+    "Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCartAndRemove.executor": "Run",
+    "Python tests.Python tests for test_add_to_cart.TestAddToCart.testClickOnItemBackPack.executor": "Run",
+    "Python tests.Python tests for test_login.TestLogin.executor": "Run",
+    "Python tests.Python tests for test_login.TestLogin.testLoginFoofooTest.executor": "Run",
+    "Python tests.Python tests for test_login.TestLogin.testLoginWithWrongEmail.executor": "Run",
+    "Python tests.Python tests for test_login.TestLogin.testLoginWithWrongUserName.executor": "Run",
+    "Python.BaseTest.executor": "Run",
+    "Python.ClickAction.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "C:/Users/gnimb/Dev/play_py",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gnimb\Dev\playwright\Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCart">
+  <component name="RunManager" selected="Python tests.Python tests for test_add_to_cart.TestAddToCart">
     <configuration name="Python tests for test_add_to_cart.TestAddToCart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="play_py" />
       <option name="ENV_FILES" value="" />
@@ -72,36 +87,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_add_to_cart.TestAddToCart&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="play_py" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_playwright" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_add_to_cart.TestAddToCart.testAddAllItemsToCart&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCartAndRemove" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="play_py" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_playwright" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_add_to_cart.TestAddToCart.testAddAllItemsToCartAndRemove&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -120,19 +105,65 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_login.TestLogin" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="play_py" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_playwright" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogin&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_login.TestLogin.testLoginFoofooTest" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="play_py" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_playwright" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogin.testLoginFoofooTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_login.TestLogin.testLoginWithWrongUserName" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="play_py" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_playwright" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogin.testLoginWithWrongUserName&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCart" />
         <item itemvalue="Python tests.Python tests for test_add_to_cart.TestAddToCart" />
-        <item itemvalue="Python tests.Python tests for test_add_to_cart.TestAddToCart.testAddAllItemsToCartAndRemove" />
+        <item itemvalue="Python tests.Python tests for test_login.TestLogin" />
         <item itemvalue="Python tests.Python tests for test_add_to_cart.TestAddToCart.testClickOnItemBackPack" />
+        <item itemvalue="Python tests.Python tests for test_login.TestLogin.testLoginFoofooTest" />
+        <item itemvalue="Python tests.Python tests for test_login.TestLogin.testLoginWithWrongUserName" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
+        <option value="bundled-python-sdk-14705d77f0bb-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.25659.43" />
       </set>
     </attachedChunks>
   </component>
@@ -180,5 +211,16 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Second commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_playwright/test_login.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
