@@ -1,7 +1,7 @@
 import unittest
 
 from pytest_playwright.pytest_playwright import page
-from Infra.test_actions.GetLocator import getLocator
+from Infra.test_actions.locators_methods import getLocator
 
 class Scenarios(unittest.TestCase):
 

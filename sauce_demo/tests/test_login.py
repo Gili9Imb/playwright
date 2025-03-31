@@ -1,4 +1,4 @@
-from Infra.test_actions.GetLocator import getLocator
+from Infra.test_actions.locators_methods import getLocator
 from Infra.test_base import BaseTest
 
 

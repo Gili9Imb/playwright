@@ -1,6 +1,6 @@
 # sauce_demo/tests/test_add_to_cart.py
-from Infra.test_actions.GetLocator import getLocator
-from sauce_demo.tests.Scenarios import Scenarios
+from Infra.test_actions.locators_methods import getLocator
+from sauce_demo.tests.scenarios import Scenarios
 from Infra.test_base import BaseTest
 
 class TestAddToCart(BaseTest):
