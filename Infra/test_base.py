@@ -1,6 +1,6 @@
 import unittest
 from playwright.sync_api import sync_playwright
-from test_actions.OpenUrl import OpenUrl
+from Infra.test_actions.OpenUrl import OpenUrl
 
 class BaseTest(unittest.TestCase):
 

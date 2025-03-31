@@ -1,7 +1,7 @@
 import unittest
 
 from pytest_playwright.pytest_playwright import page
-from test_actions.GetLocator import getLocator
+from Infra.test_actions.GetLocator import getLocator
 
 class Scenarios(unittest.TestCase):
 
@@ -15,4 +15,4 @@ class Scenarios(unittest.TestCase):
         print("Page opened")
         getLocator(page, "locator", "//input[@id='user-name']").type("standard_user")
         getLocator(page, "locator", "//input[@id='password']").type("secret_sauce")
-        getLocator(page, "locator", '[data-test=\"login-button\"]').click()
+        getLocator(page, "text", 'Login').click()
