@@ -1,5 +1,5 @@
-from test_actions.GetLocator import getLocator
-from test_playwright.test_base import BaseTest
+from Infra.test_actions.GetLocator import getLocator
+from Infra.test_base import BaseTest
 
 
 class TestLogin(BaseTest):
@@ -10,7 +10,7 @@ class TestLogin(BaseTest):
         print("Page opened")
         getLocator(page,"locator", "//input[@id='user-name']").type("standard_user")
         getLocator(page,"locator", "//input[@id='password']").type("secret_sauce")
-        getLocator(page,"locator", '[data-test=\"login-button\"]').click()
+        getLocator(page, "text", 'Login').click()
         getLocator(page, "text", "Sauce Labs Backpack").is_visible()
         self.assertEqual(page.url, "https://www.saucedemo.com/inventory.html", "Failed to login")
         self.assertTrue(page.locator("text=Sauce Labs Backpack").is_visible(), "Sauce Labs Backpack not visible")
@@ -21,5 +21,5 @@ class TestLogin(BaseTest):
         print("Page opened")
         getLocator(page, "locator", "//input[@id='user-name']").type("standard_use")
         getLocator(page, "locator", "//input[@id='password']").type("secret_sauce")
-        getLocator(page, "locator", '[data-test=\"login-button\"]').click()
+        getLocator(page, "text", 'Login').click()
         getLocator(page, "text", "Epic sadface: Username and password do not match any user in this service").is_visible()
